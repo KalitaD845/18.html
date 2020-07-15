@@ -10,33 +10,64 @@
 </head>
 <body>
     <div class="fone">
+        <h1>Catch Me </h1> 
+        <div id="five"></div> 
+        <div id="four"></div>
+        <div id="three"></div>
+        <div id="two"></div>
+        <div id="one"></div>
+        <h1> Times If You Can</h1>
         <div id="berd">
             <img src="img/ZHug.gif" alt="">
         </div>
+        <div id="congrat">
+            <h2>Поздравляем, вы убили ворону!</h2>
+        </div>
     </div>
  <script>
-     berd.onclick = function(event) {
-    setTimeout(() => {
-      berd.style.top = '300px'
-      berd.style.left = '400px'
-  
-    }, 50)
-  }; 
-  berd.onclick = function(event) {
-      berd.style.top = '300px'
-      berd.style.left = '400px'
-    setTimeout(() => {
-        berd.style.top = '200px'
-      berd.style.left = '600px'
-     
-    }, 50)
-  }; 
+    berd.addEventListener('mousemove', function(event) {
+        
+        setTimeout(() => {         
+      berd.style.top = Math.round(Math.random() * 500)+ 'px';
+      berd.style.left =  Math.round(Math.random() * 500)+ 'px';
+ 
+    }, 100)
+}) 
+function fives(){
+     five.style.display = 'none'
+     four.style.display = 'flex'
+ }
+
+function fours(){
+      four.style.display = 'none'
+      three.style.display = 'flex'
+ }
+function threes(){
+      three.style.display = 'none'
+      two.style.display = 'flex'
+ }
+function twos(){
+     two.style.display = 'none'
+     one.style.display = 'flex'
+ }
+function ones(){
+    berd.style.display = 'none'
+    congrat.style.display = 'flex'; 
+ }
+
+ berd.addEventListener('click', fives )
+ berd.addEventListener('click', fours )
+ berd.addEventListener('click', threes )
+ berd.addEventListener('click', twos)
+ berd.addEventListener('click', ones )
+ 
+ 
+
  </script>
   
 </body>
 
 </html>
-
 
 файл CSS:
 *{
@@ -56,12 +87,70 @@
   
 }
 #berd {
- 
+    display: inline;
     width: 90px;
     height: 90px;
     position: absolute;
     transition: 0.4s ease;
     top: 0px;
     left: 0px;
-  
+    transform: scale(1, 1)
+}
+h1{
+    text-align: center;
+}
+#congrat{
+    width: 500px;
+    margin: auto;
+    height: 400px;
+    background-color: lightsalmon;
+    color: teal;
+    font-size: 30pt;
+    text-align: center;
+    display: none;
+}
+#five{
+    background-image: url(img/5.png);
+    background-repeat: no-repeat;
+    width: 60px;
+    margin: auto;
+    height: 60px;
+    text-align: center;
+    display: flex;
+}
+#four{
+    background-image: url(img/4.png);
+    background-repeat: no-repeat;
+    width: 60px;
+    margin: auto;
+    height: 60px;
+    text-align: center;
+    display: none;
+}
+#three{
+    background-image: url(img/3.png);
+    background-repeat: no-repeat;
+    width: 60px;
+    margin: auto;
+    height: 60px;
+    text-align: center;
+    display: none;
+}
+#two{
+    background-image: url(img/two.png);
+    background-repeat: no-repeat;
+    width: 60px;
+    margin: auto;
+    height: 60px;
+    text-align: center;
+    display: none;
+}
+#one{
+    background-image: url(img/one.png);
+    background-repeat: no-repeat;
+    width: 60px;
+    margin: auto;
+    height: 60px;
+    text-align: center;
+    display: none;
 }
