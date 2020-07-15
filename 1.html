@@ -1,0 +1,67 @@
+# 18.html
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fone">
+        <div id="berd">
+            <img src="img/ZHug.gif" alt="">
+        </div>
+    </div>
+ <script>
+     berd.onclick = function(event) {
+    setTimeout(() => {
+      berd.style.top = '300px'
+      berd.style.left = '400px'
+  
+    }, 50)
+  }; 
+  berd.onclick = function(event) {
+      berd.style.top = '300px'
+      berd.style.left = '400px'
+    setTimeout(() => {
+        berd.style.top = '200px'
+      berd.style.left = '600px'
+     
+    }, 50)
+  }; 
+ </script>
+  
+</body>
+
+</html>
+
+
+файл CSS:
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.fone{
+    background-image: url(img/fone.jpg);
+    background-size:cover;
+    height:100vh;
+    background-repeat: no-repeat;
+}
+#berd img{
+ 
+    width: 150px;
+    height: 150px;
+  
+}
+#berd {
+ 
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    transition: 0.4s ease;
+    top: 0px;
+    left: 0px;
+  
+}
